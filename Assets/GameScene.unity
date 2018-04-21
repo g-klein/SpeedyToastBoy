@@ -563,6 +563,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1486589949}
+  - component: {fileID: 1486589950}
   m_Layer: 0
   m_Name: Singletons
   m_TagString: Untagged
@@ -579,11 +580,23 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1640692980}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486589950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486589948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce6e80485d7a7a4d9893731f837bef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  singletons:
+  - {fileID: 1498365875186344, guid: 7608380bd118dd243b2cc9354aa82de6, type: 2}
 --- !u!1001 &1543859389
 Prefab:
   m_ObjectHideFlags: 0
@@ -631,49 +644,6 @@ Prefab:
     - {fileID: 65072904981730120, guid: 6b720d3102bd22b4c8a5984bb9677649, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6b720d3102bd22b4c8a5984bb9677649, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1640692979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1640692980}
-  - component: {fileID: 1640692981}
-  m_Layer: 0
-  m_Name: PlayerRespawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1640692980
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1640692979}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1486589949}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1640692981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1640692979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c83d6eafbea3e746bb2c88332dd963d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnYValue: 4
-  playerPrefab: {fileID: 1118991298825968, guid: 67a260d92d3900346b44f653c9e3bd5c,
-    type: 2}
 --- !u!1001 &1702092993
 Prefab:
   m_ObjectHideFlags: 0
