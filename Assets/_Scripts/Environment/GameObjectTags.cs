@@ -6,4 +6,6 @@ public static class GameObjectTags {
 	public const string Player = "Player";
 	public const string Enemy = "Enemy";
 	public const string Environment = "Environment";
+	public const string Explosions = "Explosions";
+	public const string Asteroids = "Asteroids";
 }

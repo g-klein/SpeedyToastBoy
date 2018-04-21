@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212045333449345598}
   - component: {fileID: 114692215845762114}
   - component: {fileID: 61102076056576320}
+  - component: {fileID: 114830481250453476}
   m_Layer: 0
   m_Name: ForkMissile
   m_TagString: Untagged
@@ -79,6 +80,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &114830481250453476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010976504634074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1838c213880c74db48b4fb4a7aee7b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 1929122651446742, guid: 843a7b91f0ee24887bc21ef2aa25af6d, type: 2}
 --- !u!212 &212045333449345598
 SpriteRenderer:
   m_ObjectHideFlags: 1

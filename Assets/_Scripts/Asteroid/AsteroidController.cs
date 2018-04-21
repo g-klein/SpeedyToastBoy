@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AsteroidController : MonoBehaviour {
-	public GameObject Explosion;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -11,12 +10,12 @@ public class AsteroidController : MonoBehaviour {
 
         switch (go.tag)
         {
-            case "Player":
+			case GameObjectTags.Player:
                 go.GetComponent<PlayerDeathController>().Die();
                 break;
-            default:
-                Destroy(gameObject);
-                break;
+			case GameObjectTags.Environment:
+				Destroy (gameObject);
+    		    break;
         }
 
 
@@ -24,7 +23,4 @@ public class AsteroidController : MonoBehaviour {
         Destroy(gameObject);
     }
 
-	void OnDestroy() {
-		Instantiate (Explosion, new Vector2 (this.transform.position.x, this.transform.position.y), Quaternion.identity);
-	}
 }

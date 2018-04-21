@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 212443848140946118}
   - component: {fileID: 114565127952732442}
   - component: {fileID: 61174910675794374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprTurret_strip4_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4464202590246920}
   - component: {fileID: 212562989083802472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprTurret_strip4_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4175581511700796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4582436458484840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4617229859790214}
   - component: {fileID: 212087624582441160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprTurret_strip4_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,6 @@ MonoBehaviour:
   turretShaft: {fileID: 1870819959320866}
   aimCursor: {fileID: 2800000, guid: 6e276a6ce7741f64db58c9e98f821660, type: 3}
   shotCooldown: 1
-  timeSinceLastShot: 0
 --- !u!212 &212087624582441160
 SpriteRenderer:
   m_ObjectHideFlags: 1
