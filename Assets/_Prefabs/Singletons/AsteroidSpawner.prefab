@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747c783a9318ccb409c1f2b5f48c8a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnRate: 1
+  SpawnRate: 0.5
   TimeSinceLastSpawn: 0
-  Thrust: 300
+  Thrust: 150
   AsteroidPrefab: {fileID: 1992509823624336, guid: 9ceb794f80ab593478d548aca7fddb8b,
     type: 2}
   spawnHeight: 10
