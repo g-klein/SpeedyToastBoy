@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114166775418798310}
   - component: {fileID: 61283081596336568}
   - component: {fileID: 114504404161417772}
+  - component: {fileID: 95634182628512900}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -109,7 +110,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.46, y: 0.73}
+    oldSize: {x: 0.75, y: 0.7777778}
     newSize: {x: 0.46, y: 0.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -118,6 +119,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.8}
   m_EdgeRadius: 0
+--- !u!95 &95634182628512900
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118991298825968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eacbaa53bf1fe4f2fa4e4146766dbc76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114166775418798310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,8 +198,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 737c0e3c7141771458593d9fb283bed2, type: 3}
+  m_SortingOrder: 1000
+  m_Sprite: {fileID: 21300000, guid: 6831016c70867d641b8338440a47907c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
