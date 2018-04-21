@@ -38,8 +38,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
 
-        //anim.SetFloat("Speed", Mathf.Abs(h));
-
+        anim.SetFloat("Speed", Mathf.Abs(h));
         if (h * rb2d.velocity.x < maxSpeed)
             rb2d.AddForce(Vector2.right * h * moveForce);
 
@@ -53,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (jump)
         {
-            //anim.SetTrigger("Jump");
+            anim.SetTrigger("Jump");
             rb2d.AddForce(new Vector2(0f, jumpForce));
             jump = false;
         }
