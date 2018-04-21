@@ -11,12 +11,12 @@ public class AsteroidController : MonoBehaviour {
 
         switch (go.tag)
         {
-            case "Player":
+			case GameObjectTags.Player:
                 go.GetComponent<PlayerDeathController>().Die();
                 break;
-            default:
-                Destroy(gameObject);
-                break;
+			case GameObjectTags.Environment:
+				Destroy (gameObject);
+    		    break;
         }
 
 
