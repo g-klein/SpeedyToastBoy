@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 1539144361}
   - component: {fileID: 1539144360}
   - component: {fileID: 1539144359}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Toaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,12 +379,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1539144358}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8, y: -3.06, z: 0}
-  m_LocalScale: {x: 3.0267467, y: 3.0267467, z: 3.0267467}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.8000002, y: -3.06, z: 0}
+  m_LocalScale: {x: 3.0267467, y: 3.0267467, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1702092993
 Prefab:
@@ -423,7 +423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4236631203305102, guid: 67a260d92d3900346b44f653c9e3bd5c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 212361263479056586, guid: 67a260d92d3900346b44f653c9e3bd5c,
         type: 2}
