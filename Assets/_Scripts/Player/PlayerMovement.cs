@@ -5,9 +5,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector] public bool facingRight = true;
     [HideInInspector] public bool jump = false;
-    public float moveForce = 365f;
-    public float maxSpeed = 5f;
-    public float jumpForce = 1000f;
+    public float moveForce;
+    public float maxSpeed;
+    public float jumpForce;
     public Transform groundCheck;
 
 
@@ -56,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
             //anim.SetTrigger("Jump");
             rb2d.AddForce(new Vector2(0f, jumpForce));
             jump = false;
+        }
+
+        if (grounded)
+        {
+            rb2d.velocity = new Vector2(0.8f * rb2d.velocity.x, rb2d.velocity.y);
         }
     }
 
