@@ -50,7 +50,7 @@ public class TurretController : MonoBehaviour
         turretGraphics.SetActive(true);
         turretActive = true;
 
-        Cursor.SetCursor(aimCursor, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(aimCursor, new Vector2(16,16), CursorMode.Auto);
     }
 
     void TurnOff()
