@@ -42,7 +42,7 @@ public class AsteroidSpawner : MonoBehaviour {
 
         var sausage = Instantiate(AsteroidPrefab, spawnPoint, Quaternion.identity);
 
-        var sausageForce = new Vector3(Random.Range(-20, 20), -35);
+        var sausageForce = new Vector3(Random.Range(-20, 20), -165);
         sausage.GetComponent<Rigidbody2D>().AddForce(sausageForce);
     }
 }
