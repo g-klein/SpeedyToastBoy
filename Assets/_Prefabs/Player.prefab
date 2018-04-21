@@ -150,9 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
-  moveForce: 365
-  maxSpeed: 5
-  jumpForce: 300
+  moveForce: 125
+  maxSpeed: 7
+  jumpForce: 350
   groundCheck: {fileID: 4234738835993490}
 --- !u!114 &114504404161417772
 MonoBehaviour:

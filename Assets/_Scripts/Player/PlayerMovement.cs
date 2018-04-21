@@ -55,10 +55,9 @@ public class PlayerMovement : MonoBehaviour
             jump = false;
         }
 
-        if (grounded)
-        {
-            rb2d.velocity = new Vector2(0.8f * rb2d.velocity.x, rb2d.velocity.y);
-        }
+
+        //simulated friction
+        rb2d.velocity = new Vector2(0.8f * rb2d.velocity.x, rb2d.velocity.y);
     }
 
     void Flip()
