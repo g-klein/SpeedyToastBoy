@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 50175154783730156}
   - component: {fileID: 114166775418798310}
   - component: {fileID: 61283081596336568}
-  - component: {fileID: 114504404161417772}
   - component: {fileID: 95634182628512900}
   - component: {fileID: 114698504733619254}
   m_Layer: 0
@@ -68,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118991298825968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.52, y: -2.04, z: 0}
+  m_LocalPosition: {x: -1.352, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4234738835993490}
@@ -88,7 +87,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.1
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: c562c7cd3caf73a42865617cde2c2a1e, type: 2}
   m_Interpolate: 0
@@ -107,18 +106,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.002781272}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.7777778}
+    oldSize: {x: 0.15, y: 0.15555556}
     newSize: {x: 0.46, y: 0.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.8}
+  m_Size: {x: 0.16623473, y: 0.16028315}
   m_EdgeRadius: 0
 --- !u!95 &95634182628512900
 Animator:
@@ -150,22 +149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
-  moveForce: 125
-  maxSpeed: 7
-  jumpForce: 350
+  moveForce: 60
+  maxSpeed: 2
+  jumpForce: 200
   groundCheck: {fileID: 4234738835993490}
---- !u!114 &114504404161417772
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1118991298825968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07c974c00b607a46a9a7dc969f6b413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 1118991298825968}
 --- !u!114 &114698504733619254
 MonoBehaviour:
   m_ObjectHideFlags: 1

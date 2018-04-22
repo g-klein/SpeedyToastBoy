@@ -51,5 +51,7 @@ public class AsteroidSpawner : MonoBehaviour {
 		var worldTargetVector = Camera.main.ScreenToWorldPoint (randomTargetVector);
 		sausage.transform.rotation = Quaternion.LookRotation(Vector3.forward, sausage.transform.position - worldTargetVector);
 		sausage.GetComponent<Rigidbody2D> ().AddForce (sausage.transform.up * -Thrust);
+
+        Destroy(sausage, 5f);
     }
 }

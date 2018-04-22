@@ -6,7 +6,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerDeathController : MonoBehaviour {
-    public PlayerDeathController Instance;
+    public static PlayerDeathController Instance;
+
+    void Start()
+    {
+        Debug.Log("Setting instance");
+        Instance = this;
+    }
 
     void Update()
     {

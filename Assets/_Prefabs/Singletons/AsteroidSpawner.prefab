@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnRate: 0.5
   TimeSinceLastSpawn: 0
-  Thrust: 150
+  Thrust: 50
   AsteroidPrefab: {fileID: 1992509823624336, guid: 9ceb794f80ab593478d548aca7fddb8b,
     type: 2}
   spawnHeight: 10

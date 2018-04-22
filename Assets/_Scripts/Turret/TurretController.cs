@@ -68,7 +68,6 @@ public class TurretController : MonoBehaviour
         {
             CheckForShotInput();
             PointShaft();
-            
         }
 
         //prevent this from incrementing to infinity just in case..
@@ -90,7 +89,9 @@ public class TurretController : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && timeSinceLastShot >= shotCooldown)
         {
-            Instantiate(missilePrefab, turretShaftPoint.transform.position, turretShaftPoint.transform.rotation);
+            var fork = Instantiate(missilePrefab, turretShaftPoint.transform.position, turretShaftPoint.transform.rotation);
+            Destroy(fork, 5f);
+            timeSinceLastShot = 0f;
         }
     }
 }

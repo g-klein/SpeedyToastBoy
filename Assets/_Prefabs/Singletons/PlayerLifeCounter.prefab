@@ -52,4 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLives: 3
-  maxLives: 0
+  maxLives: 3

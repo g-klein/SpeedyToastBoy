@@ -11,9 +11,7 @@ namespace AssemblyCSharp
         void OnApplicationQuit()
         {
             isQuitting = true;
-        }
-
-        
+        }        
 
         public void OnDestroy() {
             if (!isQuitting)
