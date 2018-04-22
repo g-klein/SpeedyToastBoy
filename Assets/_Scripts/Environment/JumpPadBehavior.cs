@@ -9,9 +9,10 @@ public class JumpPadBehavior : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		var rb = coll.gameObject.GetComponent<Rigidbody2D> ();
 		switch(coll.gameObject.tag) {
-		case GameObjectTags.Player:
-			rb.AddForce (ForceVector);
-			break;
+		    case GameObjectTags.Player:
+                SoundManager.Instance.PlaySound("Toaster_Jump_1");
+			    rb.AddForce (ForceVector);
+			    break;
 		}
 	}
 }

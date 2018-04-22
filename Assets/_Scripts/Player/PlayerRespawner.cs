@@ -24,7 +24,6 @@ public class PlayerRespawner : MonoBehaviour {
     {
         yield return new WaitForSeconds(delay);
         var respawnPos = new Vector3(position.x, respawnYValue, position.z);
-        
         Instantiate(playerPrefab, respawnPos, Quaternion.identity);
     }
 }

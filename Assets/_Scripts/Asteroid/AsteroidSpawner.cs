@@ -13,21 +13,39 @@ public class AsteroidSpawner : MonoBehaviour {
     [Range(1,100)]
     public float screenPercentSpawnBounds;
 
+    public static AsteroidSpawner Instance;
+
+    private bool Spawning;
+
 	// Use this for initialization
 	void Start () {
         TimeSinceLastSpawn = 0;
+        Spawning = false;
+        Instance = this;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        TimeSinceLastSpawn += Time.deltaTime;
+        TimeSinceLastSpawn = Mathf.Min(TimeSinceLastSpawn + Time.deltaTime, SpawnRate);
 
-        if(TimeSinceLastSpawn >= SpawnRate)
+        if(Spawning && TimeSinceLastSpawn >= SpawnRate)
         {
             SpawnSausage();
             TimeSinceLastSpawn = 0;
         }
 	}
+
+    public IEnumerator SpawnCoroutine(float numberOfSeconds)
+    {
+        Spawning = true;
+        yield return new WaitForSeconds(numberOfSeconds);
+        Spawning = false;
+    }
+
+    public void SpawnForSeconds(float numberOfSeconds)
+    {
+        StartCoroutine(SpawnCoroutine(numberOfSeconds));
+    }
 
     void SpawnSausage()
     {
@@ -53,5 +71,18 @@ public class AsteroidSpawner : MonoBehaviour {
 		sausage.GetComponent<Rigidbody2D> ().AddForce (sausage.transform.up * -Thrust);
 
         Destroy(sausage, 5f);
+    }
+
+    void OnGUI()
+    {
+        var width = 100;
+        var style = new GUIStyle();
+        style.fontSize = 32;
+        style.normal.textColor = Color.black;
+        style.alignment = TextAnchor.MiddleCenter;
+
+        var txt = Spawning ? "INCOMING ROCKETS!" : "";
+
+        GUI.Label(new Rect(Screen.width / 2 - (width / 2), Screen.height / 3, 200, 200), txt, style);
     }
 }

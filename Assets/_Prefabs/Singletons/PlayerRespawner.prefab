@@ -51,6 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c83d6eafbea3e746bb2c88332dd963d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnYValue: 8
+  respawnYValue: 1
   playerPrefab: {fileID: 1118991298825968, guid: 67a260d92d3900346b44f653c9e3bd5c,
     type: 2}

@@ -72,6 +72,11 @@ public class TurretController : MonoBehaviour
 
         //prevent this from incrementing to infinity just in case..
         timeSinceLastShot = Mathf.Min(timeSinceLastShot + Time.deltaTime, shotCooldown);
+
+        if(turretActive && PlayerInstance.Instance == null)
+        {
+            TurnOff();
+        }
     }
 
     private void PointShaft()
@@ -90,6 +95,7 @@ public class TurretController : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && timeSinceLastShot >= shotCooldown)
         {
             var fork = Instantiate(missilePrefab, turretShaftPoint.transform.position, turretShaftPoint.transform.rotation);
+            SoundManager.Instance.PlaySound("Trow_Rocket");
             Destroy(fork, 5f);
             timeSinceLastShot = 0f;
         }

@@ -17,7 +17,7 @@ public class PlayerDeathController : MonoBehaviour {
     void Update()
     {
         var player = PlayerInstance.Instance;
-        if(player != null && player.gameObject.transform.position.y <= -10)
+        if(player != null && player.gameObject.transform.position.y <= -1)
         {
             Die();
         }
