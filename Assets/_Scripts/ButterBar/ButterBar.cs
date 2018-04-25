@@ -9,9 +9,7 @@ public class ButterBar : MonoBehaviour {
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit a big boi!");
         Debug.Log(other.gameObject.tag);
-        if(other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene((int)SceneDescriptions.Winner, LoadSceneMode.Single);
         }

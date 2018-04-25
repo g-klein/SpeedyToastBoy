@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AsteroidSpawner : MonoBehaviour {
     public float SpawnRate;
@@ -14,15 +15,20 @@ public class AsteroidSpawner : MonoBehaviour {
     public float screenPercentSpawnBounds;
 
     public static AsteroidSpawner Instance;
+    private GUIStyle style;
 
-    private bool Spawning;
+    public bool Spawning;
 
 	// Use this for initialization
 	void Start () {
         TimeSinceLastSpawn = 0;
         Spawning = false;
         Instance = this;
-	}
+        style = new GUIStyle();
+        style.fontSize = 32;
+        style.normal.textColor = Color.black;
+        style.alignment = TextAnchor.MiddleCenter;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,7 +44,12 @@ public class AsteroidSpawner : MonoBehaviour {
     public IEnumerator SpawnCoroutine(float numberOfSeconds)
     {
         Spawning = true;
+        var img = GameObject.Find("RedCanvas").transform.GetChild(0).GetComponent<Image>();
+        img.gameObject.SetActive(true);
+        img.canvasRenderer.SetAlpha(0);
+        img.CrossFadeAlpha(0.3f, 0.3f, true);
         yield return new WaitForSeconds(numberOfSeconds);
+        img.CrossFadeAlpha(0f, 0.3f, true);
         Spawning = false;
     }
 
@@ -76,12 +87,7 @@ public class AsteroidSpawner : MonoBehaviour {
     void OnGUI()
     {
         var width = 100;
-        var style = new GUIStyle();
-        style.fontSize = 32;
-        style.normal.textColor = Color.black;
-        style.alignment = TextAnchor.MiddleCenter;
-
-        var txt = Spawning ? "INCOMING ROCKETS!" : "";
+        var txt = Spawning ? "INCOMING ROCKETS!\r\n Get to a turret!" : "";
 
         GUI.Label(new Rect(Screen.width / 2 - (width / 2), Screen.height / 3, 200, 200), txt, style);
     }

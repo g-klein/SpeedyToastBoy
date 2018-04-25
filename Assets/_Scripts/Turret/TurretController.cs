@@ -13,6 +13,7 @@ public class TurretController : MonoBehaviour
     public GameObject turretShaft;
     private SpriteRenderer spriteRenderer;
     private bool turretActive;
+    private GUIStyle style;
 
     public Texture2D aimCursor;
 
@@ -24,6 +25,12 @@ public class TurretController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         TurnOff();
         timeSinceLastShot = shotCooldown;
+
+        style = new GUIStyle();
+        style.fontSize = 40;
+        style.normal.textColor = Color.black;
+        style.alignment = TextAnchor.MiddleCenter;
+        style.fontStyle = FontStyle.Bold;
     }
 
 
@@ -99,5 +106,13 @@ public class TurretController : MonoBehaviour
             Destroy(fork, 5f);
             timeSinceLastShot = 0f;
         }
+    }
+
+    private void OnGUI()
+    {
+        var width = 100;
+        var txt = (turretActive && AsteroidSpawner.Instance.Spawning) ? "Click to shoot!" : "";
+
+        GUI.Label(new Rect(Screen.width / 2 - (width / 2), (Screen.height / 3) + 80, 200, 200), txt, style);
     }
 }

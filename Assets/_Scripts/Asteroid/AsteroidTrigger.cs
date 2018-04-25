@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AsteroidTrigger : MonoBehaviour
 {
+    public float SpawnRate;
+    public float SpawnTime;
+
     void Start()
     {
         GetComponent<SpriteRenderer>().enabled = false;
@@ -16,7 +19,8 @@ public class AsteroidTrigger : MonoBehaviour
         switch (go.tag)
         {
             case GameObjectTags.Player:
-                AsteroidSpawner.Instance.SpawnForSeconds(20f);
+                AsteroidSpawner.Instance.SpawnRate = SpawnRate;
+                AsteroidSpawner.Instance.SpawnForSeconds(SpawnTime);
                 Destroy(gameObject);
                 break;
         }
