@@ -15,7 +15,7 @@ public class ExplosionBehavior : MonoBehaviour {
 
 		switch (go.tag) {
 		case GameObjectTags.Player:
-			go.GetComponent<PlayerDeathController> ().Die ();
+			PlayerDeathController.Instance.Die();
 			break;
 		case GameObjectTags.Asteroids:
 			Destroy (gameObject);

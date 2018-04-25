@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && grounded)
         {
             jump = true;
+            SoundManager.Instance.PlaySound("Jump");
         }
     }
 
